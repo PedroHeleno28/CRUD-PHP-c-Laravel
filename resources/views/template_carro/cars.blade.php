@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Car Rent &mdash; Free Website Template by Colorlib</title>
+    <title>Heleno Automotivos &mdash; </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -46,7 +46,10 @@
 
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="{{ route('carros.index') }}">CarRent</a>
+                <a href="{{ route('carros.index') }}">
+                  <img src="https://i.ibb.co/ks66gCBB/Heleno-Automotivo-azul.png" alt="loh" 
+                  style="max-width: 150px; height: auto; object-fit: contain;"/>
+                </a>
               </div>
             </div>
 
@@ -60,9 +63,7 @@
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="{{ route('carros.index') }}" class="nav-link">Home</a></li>                  
-                  <li class="active"><a href="{{ route('carros') }}" class="nav-link">Cars</a></li>
-                  <li><a href="{{ route('carros.about') }}" class="nav-link">About</a></li>
-                  <li><a href="{{ route('carros.login') }}" class="nav-link">Contact</a></li>
+                  <li class="active"><a href="{{ route('carros') }}" class="nav-link">Carros</a></li>                  
                 </ul>
               </nav>
             </div>
@@ -74,17 +75,20 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="ftco-cover-1 overlay innerpage" style="background-image: url('images/hero_2.jpg')">
+      <div class="ftco-cover-1 overlay innerpage" 
+      style="background-image: url('https://i.ibb.co/ks66gCBB/Heleno-Automotivo-azul.png');            
+            max-height: 400px;
+            background-size: cover;
+            background-position: center;">
         <div class="container">
           <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h1>Our For Rent Cars</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="col-lg-6 text-center">              
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div>    
+
     <div class="container-fluid">  
     @yield("conteudo")
     </div>

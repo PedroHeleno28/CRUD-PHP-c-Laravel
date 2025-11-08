@@ -1221,7 +1221,7 @@ h1, h2, h3, h4, h5,
     min-height: 900px; }
   .ftco-cover-1.innerpage, .ftco-cover-1.innerpage .container > .row {
     height: 90vh;
-    min-height: 700px; }
+    min-height: 400px; }
   .ftco-cover-1 > .container {
     position: relative; }
   .ftco-cover-1.overlay {

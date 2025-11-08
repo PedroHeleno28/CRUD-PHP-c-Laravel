@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CarrosController;
+use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\CorController;
+use App\Http\Controllers\ModeloController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
@@ -27,6 +30,7 @@ Route::get('/', function () {
     ]);
 });
 
+
 Route::get('/dashboard', function () {
     return view('template_dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -39,16 +43,74 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-
 route::get('/index', function(){
     return view ('template_carro.index');
 })->name('carros.index');
 
-Route::get('/carros', [CarrosController::class, 'index'])->name('carros');
+
+Route::get('/carros', [CarrosController::class, 'index']
+    )->name('carros');
+
+Route::middleware('auth')->group(function () {
+//----Rota de cadastro de carros
+
+Route::get('/carros/inicio', [CarrosController::class, 'inicio']
+    )->name('carros.inicio');
+
+Route::get('/carros/cadastrar', [CarrosController::class, 'incluirCarro']
+    )->name('carros.cadastrar');
+
+route::get('/carros/{id}', [CarrosController::class, 'buscarCarro']
+    )->name('carro.buscar');
+    
+route::post('/carros/cadastrar', [CarrosController::class, 'salvarCarros']
+    )->name('carros.gravar');
+
+route::post('/carros/alterar', [CarrosController::class, 'alterarCarros']
+    )->name('carros.alterar');
+
+route::post('/deletar', [CarrosController::class, 'deletarCarro']
+    )->name('carro.deletar');
+        
+
+//----Rota de cadastro de marcas
+Route::get('/marcas', [MarcaController::class, 'marca'])->name('marcas');
+Route::get('/marcas/cadastrar', [MarcaController::class, 'incluirMarca'])->name('marcas.cadastrar');
+Route::post('/marcas/cadastrar', [MarcaController::class, 'salvarMarca'])->name('marcas.salvar');
+route::get('/marcas/{id}', [MarcaController::class, 'buscarMarca'] 
+    )->name('marcas.buscar');
+route::post('/marcas/alterar', [MarcaController::class, 'AlterarMarca'] 
+    )->name('marcas.alterar');
+route::post('/marcas/deletar/{id}', [MarcaController::class, 'deletarMarca'] 
+    )->name('marcas.deletar');
+
+
+//----Rota de cadastro de cores
+Route::get('/cores', [CorController::class, 'cores'])->name('cores');
+Route::get('/cores/cadastrar', [CorController::class, 'incluirCor'])->name('cor.cadastrar');
+Route::post('/cores/cadastrar', [CorController::class, 'salvarCor'])->name('cor.salvar');
+route::get('/cores/{id}', [CorController::class, 'buscarCor'] 
+    )->name('cor.buscar');
+route::post('/cores/alterar', [CorController::class, 'AlterarCor'] 
+    )->name('cor.alterar');
+route::get('/cores/deletar/{id}', [CorController::class, 'deletarCor'] 
+    )->name('cor.deletar');
+
+
+//----Rota de cadastro de modelos
+Route::get('/modelos', [ModeloController::class, 'modelo'])->name('modelos');
+Route::get('/modelos/cadastrar', [ModeloController::class, 'incluirModelo'])->name('modelo.cadastrar');
+Route::post('/modelos/cadastrar', [ModeloController::class, 'salvarModelo'])->name('modelo.salvar');
+route::get('/modelos/{id}', [ModeloController::class, 'buscarModelo'] 
+    )->name('modelo.buscar');
+route::post('/modelos/alterar', [ModeloController::class, 'AlterarModelo'] 
+    )->name('modelo.alterar');
+route::get('/modelos/deletar/{id}', [ModeloController::class, 'deletarModelo'] 
+    )->name('modelo.deletar');
+});
+
+
 
 route::get('/about', function(){
     return view ('template_carro.about');
 })->name('carros.about');
-
-
-#Route::get('/index', [CarrosController::class, 'create'])->name('carros.create');
