@@ -34,9 +34,11 @@ class ModeloController extends Controller
         $modelo = new modelo();
         $modelo->modelo = $request->input('modelo');
         $modelo->marca_id = $request->input('marca_id');
+        $modelo->foto = $request->input('foto');
         $modelo->save();
 
-        return redirect()->route('modelos');
+        return redirect()->route('modelos')
+            ->with('success', 'Modelo cadastrado com sucesso!');
     }
 
     public function buscarModelo($id){               
@@ -53,9 +55,11 @@ class ModeloController extends Controller
         $modelo = modelo::find($request->input('id'));        
         $modelo->update([
             'modelo' => $request->input('modelo'),
-            'marca_id' => $request->input('marca_id')]);
+            'marca_id' => $request->input('marca_id'),
+            'foto' => $request->input('foto')]);
 
-        return redirect()->route('modelos');
+        return redirect()->route('modelos')
+            ->with('success', 'Modelo alterado com sucesso!');
 
     }
 

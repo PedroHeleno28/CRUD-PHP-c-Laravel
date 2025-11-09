@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Heleno Automotivos</title>
-  <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon.png') }}" />
+  <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/kV6MR301/Heleno-Automotivo-azul-branco.png"/>  
   <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
 </head>
 
@@ -27,11 +27,8 @@
         <div class="d-flex align-items-center justify-content-center gap-2">
           
           <div class="dropdown d-flex">
-            <a class="btn btn-primary d-flex align-items-center gap-1 " href="javascript:void(0)" id="drop4"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="ti ti-shopping-cart fs-5"></i>
-              
-              <i class="ti ti-chevron-down fs-5"></i>
+            <a class="btn btn-primary" href="{{ route('home') }}" id="drop4"
+               aria-expanded="false">Home              
             </a>
           </div>
         </div>

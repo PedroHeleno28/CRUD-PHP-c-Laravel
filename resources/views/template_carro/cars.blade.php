@@ -46,7 +46,7 @@
 
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="{{ route('carros.index') }}">
+                <a href="{{ route('home') }}">
                   <img src="https://i.ibb.co/ks66gCBB/Heleno-Automotivo-azul.png" alt="loh" 
                   style="max-width: 150px; height: auto; object-fit: contain;"/>
                 </a>
@@ -62,8 +62,9 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="{{ route('carros.index') }}" class="nav-link">Home</a></li>                  
+                  <li><a href="{{ route('home') }}" class="nav-link">Home</a></li>                  
                   <li class="active"><a href="{{ route('carros') }}" class="nav-link">Carros</a></li>                  
+                  <li><a href="{{ route('login') }}" class="nav-link">Login</a></li>                  
                 </ul>
               </nav>
             </div>
@@ -96,30 +97,30 @@
     <div class="container site-section mb-5">
       <div class="row justify-content-center text-center">
         <div class="col-7 text-center mb-5">
-          <h2>How it works</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda, dolorum necessitatibus eius earum voluptates sed!</p>
+          <h2>Não perca tempo!</h2>
+          <p>Adiquira já sua nova conquista conosco!</p>
         </div>
       </div>
       <div class="how-it-works d-flex">
         <div class="step">
           <span class="number"><span>01</span></span>
-          <span class="caption">Time &amp; Place</span>
+          <span class="caption">Hora &amp; Lugar</span>
         </div>
         <div class="step">
           <span class="number"><span>02</span></span>
-          <span class="caption">Car</span>
+          <span class="caption">Carro</span>
         </div>
         <div class="step">
           <span class="number"><span>03</span></span>
-          <span class="caption">Details</span>
+          <span class="caption">Detalhes</span>
         </div>
         <div class="step">
           <span class="number"><span>04</span></span>
-          <span class="caption">Checkout</span>
+          <span class="caption">Vistoria</span>
         </div>
         <div class="step">
           <span class="number"><span>05</span></span>
-          <span class="caption">Done</span>
+          <span class="caption">Compra</span>
         </div>
 
       </div>

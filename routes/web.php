@@ -43,13 +43,11 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-route::get('/index', function(){
-    return view ('template_carro.index');
-})->name('carros.index');
-
-
 Route::get('/carros', [CarrosController::class, 'index']
     )->name('carros');
+
+Route::get('/home', [CarrosController::class, 'home']
+    )->name('home');    
 
 Route::middleware('auth')->group(function () {
 //----Rota de cadastro de carros
@@ -60,6 +58,9 @@ Route::get('/carros/inicio', [CarrosController::class, 'inicio']
 Route::get('/carros/cadastrar', [CarrosController::class, 'incluirCarro']
     )->name('carros.cadastrar');
 
+Route::get('/carro/detalhes/{id}', [CarrosController::class, 'detalhes']
+    )->name('carros.detalhes');    
+
 route::get('/carros/{id}', [CarrosController::class, 'buscarCarro']
     )->name('carro.buscar');
     
@@ -69,7 +70,7 @@ route::post('/carros/cadastrar', [CarrosController::class, 'salvarCarros']
 route::post('/carros/alterar', [CarrosController::class, 'alterarCarros']
     )->name('carros.alterar');
 
-route::post('/deletar', [CarrosController::class, 'deletarCarro']
+route::get('/carros/deletar/{id}', [CarrosController::class, 'deletarCarros']
     )->name('carro.deletar');
         
 

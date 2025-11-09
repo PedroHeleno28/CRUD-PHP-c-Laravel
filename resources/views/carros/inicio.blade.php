@@ -22,7 +22,7 @@
                 <td>{{ $linha->km }}</td>
                 <td>{{ $linha->ano_fabricacao }}</td>
                 <td><a href="{{ route('carro.buscar', $linha->id) }}" class="btn btn-primary">✏️</a> 
-                    <a href="{{ route('carro.deletar', $linha->id) }}"  class="btn btn-danger">❌</a>
+                    <a href="{{ route('carro.deletar', $linha->id) }}"  class="btn btn-danger">🗑️</a>
                 </td>           
         </tr>
         @endforeach

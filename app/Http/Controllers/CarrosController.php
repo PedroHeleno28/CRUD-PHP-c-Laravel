@@ -20,6 +20,14 @@ class CarrosController extends Controller
         return view('carros.index', compact('carros', 'modelos', 'marcas'));
     }
 
+    public function home(){        
+        $carros= Carros::all();
+        $modelos=modelo::all();
+        $marcas= marca::all();
+
+        return view('carros.home', compact('carros', 'modelos', 'marcas'));
+    }
+
     //-----Cadastro de carros
 
     public function inicio(){
@@ -39,6 +47,17 @@ class CarrosController extends Controller
        return view('carros.cadastrar', compact('carros', 'modelos', 'marca', 'cor')); 
     }
 
+
+    public function detalhes($id)
+    {
+        $carro = Carros::with('modelo')->findOrFail($id);
+        $modelo= modelo::all();
+        $cor= cor::all();
+
+
+        return view('carros.detalhes', compact('carro', 'modelo', 'cor'));
+    }
+
     public function salvarCarros(Request $request)  
     {
     // Validação básica (opcional, mas recomendado)
@@ -49,7 +68,26 @@ class CarrosController extends Controller
         'preco' => 'required|numeric|min:0',
         'km' => 'required|numeric|min:0',
         'ano_fabricacao' => 'required|min:4',
-    ]);
+    ],
+    [
+        'marca_id.required' => 'A marca é obrigatória.',
+        'marca_id.exists' => 'A marca selecionada é inválida.',
+        'modelo_id.required' => 'O modelo é obrigatório.',
+        'modelo_id.exists' => 'O modelo selecionado é inválido.',
+        'cor_id.required' => 'A cor é obrigatória.',
+        'cor_id.exists' => 'A cor selecionada é inválida.',
+        'preco.required' => 'O preço é obrigatório.',
+        'preco.numeric' => 'O preço deve ser um número válido.',
+        'preco.min' => 'O preço deve ser maior ou igual a zero.',
+        'km.required' => 'A quilometragem é obrigatória.',
+        'km.numeric' => 'A quilometragem deve ser um número válido.',
+        'km.min' => 'A quilometragem deve ser maior ou igual a zero.',
+        'ano_fabricacao.required' => 'O ano de fabricação é obrigatório.',
+        'ano_fabricacao.min' => 'O ano de fabricação deve ter pelo menos 4 caracteres.',
+    ]
+
+
+);
     
     $carro = new Carros();
     $carro->marca_id = $request->input('marca_id');
@@ -84,7 +122,8 @@ class CarrosController extends Controller
         $carro = Carros::find($request->input('id'));
         $carro->update($request->all());
 
-        return redirect()->route('carros.inicio');
+        return redirect()->route('carros.inicio')
+            ->with('success', 'Carro alterado com sucesso!');
 
     }
 

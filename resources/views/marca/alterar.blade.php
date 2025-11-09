@@ -21,6 +21,21 @@
   </style>
 </head>
 <body>
+
+@if(session("sucess"))
+       <div class="alert alert-success" role="alert">
+            {{ session("sucess") }}            
+        </div> 
+    @endif
+    @if ($errors->any())
+        <h3>Erro</h3>
+        @foreach($errors->all() as $erro)        
+        <div class="alert alert-danger" role="alert">
+            {{ $erro }}            
+        </div>
+        @endforeach
+    @endif
+
   <div class="container-form">
     <h1 class="text-center">Alteração de Marcas</h1>
     <form action="{{ route('marcas.alterar') }}" method="POST">      

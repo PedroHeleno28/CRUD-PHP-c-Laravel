@@ -31,7 +31,8 @@ class CorController extends Controller
         $cor->cor = $request->input('nome');        
         $cor->save();
 
-        return redirect()->route('cores');
+        return redirect()->route('cores')
+            ->with('success', 'Cor cadastrada com sucesso!');
     }
 
     public function buscarCor($id){               
@@ -47,7 +48,8 @@ class CorController extends Controller
         $cor = cor::find($request->input('id'));
         $cor->update($request->all());
 
-        return redirect()->route('cores');
+        return redirect()->route('cores')
+            ->with('success', 'Cor alterada com sucesso!');
 
     }
 

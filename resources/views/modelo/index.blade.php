@@ -16,7 +16,7 @@
                 <td>{{ $linha->marca->marca_nome }}</td>
                 <td>{{ $linha->modelo }}</td>
                 <td><a href="{{ route('modelo.buscar', $linha->id) }}" class="btn btn-primary">✏️</a> 
-                    <a href="{{ route('modelo.deletar', $linha->id) }}" class="btn btn-danger">❌</a>
+                    <a href="{{ route('modelo.deletar', $linha->id) }}" class="btn btn-danger">🗑️</a>
                 </td>           
         </tr>
         @endforeach

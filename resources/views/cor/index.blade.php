@@ -14,7 +14,7 @@
                 <td>{{ $linha->id }}</td>                
                 <td>{{ $linha->cor }}</td>                
                 <td><a href="{{ route('cor.buscar', $linha->id) }}" class="btn btn-primary">✏️</a> 
-                    <a href="{{ route('cor.deletar', $linha->id) }}" class="btn btn-danger">❌</a>
+                    <a href="{{ route('cor.deletar', $linha->id) }}" class="btn btn-danger">🗑️</a>
                 </td>                           
         </tr>
         @endforeach

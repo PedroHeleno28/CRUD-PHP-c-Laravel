@@ -32,7 +32,8 @@ class MarcaController extends Controller
         $marca->logo = $request->input('logo');
         $marca->save();
 
-        return redirect()->route('marcas');
+        return redirect()->route('marcas')
+            ->with('success', 'Marca cadastrada com sucesso!');
     }
 
     public function buscarMarca($id){               
@@ -48,7 +49,8 @@ class MarcaController extends Controller
         $marca = marca::find($request->input('id'));
         $marca->update($request->all());
 
-        return redirect()->route('marcas');
+        return redirect()->route('marcas')
+            ->with('success', 'Marca alterada com sucesso!');
 
     }
 
