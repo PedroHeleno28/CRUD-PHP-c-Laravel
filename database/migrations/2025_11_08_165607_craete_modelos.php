@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();            
             $table->string("modelo", "250");
             $table->foreignId('marca_id')->constrained('marcas');
+            $table->timestamps();
             $table->string("foto", "1000");
         });   
     }

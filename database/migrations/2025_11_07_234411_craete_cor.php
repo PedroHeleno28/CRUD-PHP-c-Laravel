@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('cores', function (Blueprint $table) {
             $table->id();                       
-            $table->string("cor", "250");            
+            $table->string("cor", "250");
+            $table->timestamps();            
         });
     }
 
