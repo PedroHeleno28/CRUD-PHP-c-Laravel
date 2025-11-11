@@ -43,8 +43,8 @@
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="{{ asset('images_login/signup-image.jpg') }}" alt="sing up image"></figure>
-                        <a href="{{ route('register') }}" class="signup-image-link">Fazer login</a>
+                        <figure><img src="https://i.ibb.co/3KHQ5B2/Design-sem-nome.png" alt="sing up image"></figure>
+                        <a href="{{ route('login') }}" class="signup-image-link">Fazer login</a>
                     </div>
 </div>          
 @endsection                

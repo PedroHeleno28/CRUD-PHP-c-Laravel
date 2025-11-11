@@ -14,7 +14,8 @@
         <tr>        
                 <td>{{ $linha->id }}</td>                
                 <td>{{ $linha->marca_nome }}</td>                
-                <td><img src="{{ $linha->imagem_url }}" class="img-produto" alt="{{ $linha->marca_nome }}"></td>
+                <td><img src="{{ $linha->logo }}" class="img-produto" alt="{{ $linha->marca_nome }}"
+                         style="max-width: 80px; height: auto; object-fit: contain;"></td>
                 <td><a href="{{ route('marcas.buscar', $linha->id) }}" class="btn btn-primary">✏️</a> 
                     <a href="{{ route('marcas.deletar', $linha->id) }}" class="btn btn-danger">🗑️</a>
                 </td>                           

@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Cadastrar Cor</title>
-  <link rel="icon" type="image/png" href="/images/title.png">
+@extends('template_dashboard.index')
+@section('conteudo')
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <style>
-    body {
-      background-color: #f8f9fa;
-      padding: 40px;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
-    .container-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+
+    input[type=number] {
+      -moz-appearance: textfield;
     }
+
+    .form-wrapper {
+    max-width: 800px;          
+    margin: 0 auto;            
+    background: #fff;          
+    padding: 2rem;             
+    border-radius: 8px;        
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05);  
+  }
   </style>
-</head>
-<body>
 
 @if(session("sucess"))
        <div class="alert alert-success" role="alert">
@@ -36,7 +38,7 @@
         @endforeach
     @endif
 
-  <div class="container-form">
+  <div class="form-wrapper">
     <h1 class="text-center">Cadastro de Cores</h1>    
     <form action="{{ route('cor.alterar') }}" method="POST">      
       @csrf
@@ -51,5 +53,4 @@
       </div>
     </form>
   </div>
-</body>
-</html>
+@endsection

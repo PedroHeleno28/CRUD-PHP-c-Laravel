@@ -49,17 +49,17 @@ Route::get('/carros', [CarrosController::class, 'index']
 Route::get('/home', [CarrosController::class, 'home']
     )->name('home');    
 
-Route::middleware('auth')->group(function () {
-//----Rota de cadastro de carros
+Route::get('/carro/detalhes/{id}', [CarrosController::class, 'detalhes']
+    )->name('carros.detalhes');    
 
+Route::middleware('auth')->group(function () {
+
+//----Rota de cadastro de carros
 Route::get('/carros/inicio', [CarrosController::class, 'inicio']
     )->name('carros.inicio');
 
 Route::get('/carros/cadastrar', [CarrosController::class, 'incluirCarro']
-    )->name('carros.cadastrar');
-
-Route::get('/carro/detalhes/{id}', [CarrosController::class, 'detalhes']
-    )->name('carros.detalhes');    
+    )->name('carros.cadastrar');    
 
 route::get('/carros/{id}', [CarrosController::class, 'buscarCarro']
     )->name('carro.buscar');

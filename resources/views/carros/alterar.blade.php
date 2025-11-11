@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Incluir</title>
-  <link rel="icon" type="image/png" href="/images/title.png">
+@extends('template_dashboard.index')
+@section('conteudo')
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <style>
-
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -18,21 +14,15 @@
       -moz-appearance: textfield;
     }
 
-    body {
-      background-color: #f8f9fa;
-      padding: 40px;
-    }
-    .container-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
+    .form-wrapper {
+    max-width: 800px;          
+    margin: 0 auto;            
+    background: #fff;          
+    padding: 2rem;             
+    border-radius: 8px;        
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05);  
+  }
   </style>
-</head>
-<body>
 
 @if(session("sucess"))
        <div class="alert alert-success" role="alert">
@@ -48,8 +38,8 @@
         @endforeach
     @endif
 
-    <div class="container-form">
-        <h1 class="text-center">Cadastro de Veículos</h1>
+    <div class="form-wrapper">
+        <h1 class="text-center">Alteração de Veículos</h1>
         <form method="POST" action="{{ route('carros.alterar')}}">              
             @csrf
             <div class="form-group">
@@ -133,5 +123,4 @@
             </div>          
         </form>
     </div>
-</body>
-</html>
+@endsection    
