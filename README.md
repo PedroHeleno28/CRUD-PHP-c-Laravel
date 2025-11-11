@@ -4,24 +4,30 @@
     -> Cole a Url do repositório: https://github.com/PedroHeleno28/CRUD-PHP-c-Laravel.git
 
 ## Configure o arquivo .env com:
+```bash 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=Automotivos
 DB_USERNAME=root
 DB_PASSWORD=
+```
 
 ## Criçao do banco e das tabelas:
 Rode o comando abaixo para fazer a criação do banco, tabelas e incluir registros para teste:
+```bash 
 php artisan migrate --seed
+```
 
 ## Acesso a área administrativa:
 Usuário e senha para fazer o acesso:
 usuário: fatap46950@limtu.com
 senha: teste1234
 
-## Rode o comando para iniciar o projeto: 
+## Rode o comando para iniciar o projeto:
+```bash 
 php artisan serve
+```
 
 ## Acesse o endpoint '/home' para ir para a página inicial:
 Acesso a área pública inicial, onde mostra as marcas cadastradas e os modelos cadastradors, além de opções na parte superior:
