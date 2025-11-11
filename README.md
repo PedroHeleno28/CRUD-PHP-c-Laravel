@@ -1,3 +1,56 @@
+# Faça o clone do repositório
+    -> Pressione as teclas Crtl + Shift + P.
+    -> Digite: 'Git: Clone' e selecione a opção.
+    -> Cole a Url do repositório: https://github.com/PedroHeleno28/CRUD-PHP-c-Laravel.git
+
+# Configure o arquivo .env com:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Automotivos
+DB_USERNAME=root
+DB_PASSWORD=
+
+# Rode o comando abaixo para fazer a criçao do banco e das tabelas:
+php artisan migrate --seed
+
+# Usuário e senha para acessar a área administrativa
+usuário: fatap46950@limtu.com
+senha: teste1234
+
+# Rode o comando para iniciar o projeto: 
+php artisan serve
+
+# Acesse o endpoint '/home' para ir para a página inicial
+Acesso a área pública inicial, onde mostra as marcas cadastradas e os modelos cadastradors, além de opções na parte superior:
+-   Home: Página inicial
+-   Carros: Veículos cadastrados
+-   Login: Acesso a área administrativa
+
+[foto]
+
+# Clicar na opção 'Carros' para verificar os veículos cadastrados
+Irá aparecer as opções de veículos e informações principais.
+[foto]
+
+# Clicar em "ver detalhes". 
+Irá aparecer todas as informações presentes do veículo.
+[foto]
+
+# Clicar em login para logar
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
