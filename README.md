@@ -3,6 +3,16 @@
     -> Digite: 'Git: Clone' e selecione a opção.
     -> Cole a Url do repositório: https://github.com/PedroHeleno28/CRUD-PHP-c-Laravel.git
 
+## Renomeia o arquivo .env.exemple
+```bash 
+composer install
+```
+
+## Renomeia o arquivo .env.exemple
+```bash 
+mv .env.exemple .env
+```
+
 ## Configure o arquivo .env com:
 ```bash 
 DB_CONNECTION=mysql
