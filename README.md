@@ -13,6 +13,11 @@ composer install
 mv .env.exemple .env
 ```
 
+## Cria a chave de criptografia
+```bash 
+php artisan key:generate
+```
+
 ## Configure o arquivo .env com:
 ```bash 
 DB_CONNECTION=mysql
@@ -91,4 +96,10 @@ No canto superior esquerdo, tem um ícone de pessoa, nele há 3 opções:
     - Logout: Encerrar a sessão logada;
 + Há outro botão, 'Home' em cima do ícone para acessar a Home mesmo logado, para voltar, basta clicar na opção 'Login' novamente. 
 <p align="center"><a target="_blank"><img src="https://i.ibb.co/pv68Lrjt/Logout.png" 
-width="400" alt="Página Home"></a></p>   
+width="400" alt="Página Home"></a></p>  
+
+<p align="center"><a target="_blank"><img src="https://i.ibb.co/jdcmWRh/profile.png" 
+width="400" alt="Página Home"></a></p>
+
+<p align="center"><a target="_blank"><img src="https://i.ibb.co/Nd7Hj9NL/Alt-Senha.png" 
+width="400" alt="Página Home"></a></p>
