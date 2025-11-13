@@ -21,14 +21,14 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
+/**Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+});*/
 
 
 Route::get('/dashboard', function () {
@@ -46,7 +46,7 @@ require __DIR__.'/auth.php';
 Route::get('/carros', [CarrosController::class, 'index']
     )->name('carros');
 
-Route::get('/home', [CarrosController::class, 'home']
+Route::get('/', [CarrosController::class, 'home']
     )->name('home');    
 
 Route::get('/carro/detalhes/{id}', [CarrosController::class, 'detalhes']
