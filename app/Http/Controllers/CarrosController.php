@@ -27,24 +27,23 @@ class CarrosController extends Controller
 
         return view('carros.home', compact('carros', 'modelos', 'marcas'));
     }
-
-    public function searchCarro(Request $request){        
-        $modeloFiltro = $request->input('modelo');
+    
+public function searchCarro(Request $request){        
+    $modeloFiltro = $request->input('modelo');
         
-        // Buscar carros pelo nome do modelo
-        if($modeloFiltro) {
-            $carros = Carros::whereHas('modelo', function($query) use ($modeloFiltro) {
-                $query->where('modelo', 'like', '%' . $modeloFiltro . '%');
-            })->with('modelo', 'marca', 'cor')->get();
-        } else {
-            $carros = Carros::with('modelo', 'marca', 'cor')->get();
-        }
-        
-        $modelos = modelo::all();
-        $marcas = marca::all();
-
-        return view('carros.index', compact('carros', 'modelos', 'marcas'));
+    if($modeloFiltro) {
+        $carros = Carros::whereHas('modelo', function($query) use ($modeloFiltro) {
+            $query->where('modelo', 'like', '%' . $modeloFiltro . '%');
+        })->with('modelo', 'marca', 'cor')->get();
+    } else {        
+        $carros = collect();
     }
+    
+    $modelos = modelo::all();
+    $marcas = marca::all();
+
+    return view('carros.index', compact('carros', 'modelos', 'marcas'));
+}
 
     public function carrosPorModelo($modeloId){
         $modelo = modelo::findOrFail($modeloId);

@@ -1,6 +1,18 @@
 @extends('template_carro.cars')
 @section('conteudo')
 
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <a href="{{ route('home') }}" class="btn btn-primary" style="padding: 12px 30px; font-size: 16px;">
+                    ← Voltar para Home
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="site-section bg-light">  
     <div class="container">
         <div class="row">

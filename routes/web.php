@@ -50,6 +50,8 @@ Route::get('/carros', [CarrosController::class, 'index']
 Route::get('/', [CarrosController::class, 'home']
     )->name('home');    
 
+Route::get('/home/search', [CarrosController::class, 'searchCarro'])->name('home.search');    
+
 Route::get('/carro/detalhes/{id}', [CarrosController::class, 'detalhes']
     )->name('carros.detalhes');    
 

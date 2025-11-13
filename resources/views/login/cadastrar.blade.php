@@ -3,6 +3,7 @@
 
 <div class="signup-content">
                     <div class="signup-form">
+                        <a href="{{ route('home') }}" class="btn btn-primary"><- Home</a>
                         <h2 class="form-title">Cadastre-se</h2>
                         <form method="POST" action="{{ route('register.store') }}"class="register-form" id="register-form">
                             @csrf
@@ -38,13 +39,13 @@
                                 <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirme sua senha" required/>
                             </div>                            
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>                                
                             </div>
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="https://i.ibb.co/3KHQ5B2/Design-sem-nome.png" alt="sing up image"></figure>
                         <a href="{{ route('login') }}" class="signup-image-link">Fazer login</a>
+                        <figure><img src="https://i.ibb.co/3KHQ5B2/Design-sem-nome.png" alt="sing up image"></figure>                        
                     </div>
 </div>          
 @endsection                

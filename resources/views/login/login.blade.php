@@ -1,13 +1,19 @@
 @extends('template_login.index')
 @section('login')
 
-<div class="signin-content">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<div class="signin-content">                    
                     <div class="signin-image">
-                        <figure><img src="https://i.ibb.co/3KHQ5B2/Design-sem-nome.png" alt="sing up image"></figure>
+                        <a href="{{ route('home') }}" class="btn btn-primary"><- Home</a>
                         <a href="{{ route('register') }}" class="signup-image-link">Criar uma conta</a>
+                        <figure><img src="https://i.ibb.co/3KHQ5B2/Design-sem-nome.png" alt="sing up image"></figure>                        
                     </div>
 
-                    <div class="signin-form">
+                    <div class="signin-form">                        
                         <h2 class="form-title">Entrar</h2>
                         <form method="POST" action="{{ route('login.store') }}" class="register-form" id="login-form">
                             @csrf

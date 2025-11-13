@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
 
+    <title>Heleno Automotivos</title>
     <!-- Font Icon -->
     <link rel="stylesheet" href="{{ asset('fonts_login/material-icon/css/material-design-iconic-font.min.css') }}">
 
