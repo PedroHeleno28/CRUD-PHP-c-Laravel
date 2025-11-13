@@ -60,7 +60,7 @@ width="400" alt="Página Home"></a></p>
 
 ## Ver detalhes: 
 Clicar no botão "Ver detalhes" para acessar todas as informações do veículo.
-<p align="center"><a target="_blank"><img src="https://i.ibb.co/BKBzgkKD/Detalhes-pt1.png" 
+<p align="center"><a target="_blank"><img src="https://s10.aconvert.com/convert/p3r68-cdx67/aehox-rezf8.png" 
 width="400" alt="Página Home"></a></p>
 <p align="center"><a target="_blank"><img src="https://i.ibb.co/Myx5PXsf/Detalhes-pt2.png" 
 width="400" alt="Página Home"></a></p>
