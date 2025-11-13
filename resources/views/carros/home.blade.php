@@ -1,9 +1,7 @@
 @extends('template_carro.cars')
-@section('conteudo')
+@section('conteudo')    
 
-<h3 class="mb-4">Marcas</h3>
-
-<div class="marcas-container">
+<div class="centralizar-pesquisa">
     @foreach($marcas as $marca)
         <div class="marca-item">
             <img src="{{ $marca->logo }}" alt="{{ $marca->marca_nome }}">
@@ -24,9 +22,7 @@
             <img src="{{ $modelo->foto }}" alt="{{ $modelo->modelo }}">
           </div>
 
-          <h4 class="mb-2">{{ $modelo->modelo }}</h4>
-
-          <a href="{{ route('carros') }}" class="btn btn-primary">Ver modelos</a>
+          <h4 class="mb-2">{{ $modelo->modelo }}</h4>          
 
         </div>
 
