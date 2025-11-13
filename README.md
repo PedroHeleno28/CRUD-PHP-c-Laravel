@@ -3,7 +3,7 @@
     -> Digite: 'Git: Clone' e selecione a opção.
     -> Cole a Url do repositório: https://github.com/PedroHeleno28/CRUD-PHP-c-Laravel.git
 
-## Renomeia o arquivo .env.exemple
+## Instale o composer
 ```bash 
 composer install
 ```
