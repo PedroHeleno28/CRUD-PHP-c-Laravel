@@ -28,7 +28,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-## Criçao do banco e das tabelas:
+## Criação do banco e das tabelas:
 Rode o comando abaixo para fazer a criação do banco, tabelas e incluir registros para teste:
 ```bash 
 php artisan migrate --seed
