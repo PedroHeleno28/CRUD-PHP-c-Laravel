@@ -63,7 +63,7 @@ Clicar no botão "Ver detalhes" para acessar todas as informações do veículo.
 <p align="center"><a target="_blank"><img src="https://i.ibb.co/27Mcgb88/Detalhes-pt1.png" 
 width="800" alt="Página Home"></a></p>
 <p align="center"><a target="_blank"><img src="https://i.ibb.co/Myx5PXsf/Detalhes-pt2.png" 
-width="800" alt="Página Home"></a></p>
+width="100%" alt="Página Home"></a></p>
 
 ## Opção 'Login':
 Será redirecionado a tela de login, como na tela abaixo:
