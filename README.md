@@ -55,7 +55,7 @@ width="400" alt="Página Home"></a></p>
 
 ## Opção 'Carros':
 Irá aparecer as opções de veículos e informações principais.
-<p align="center"><a target="_blank"><img src="https://i.ibb.co/gMqWg0kC/Carros.png" 
+<p align="center"><a target="_blank"><img src="https://s10.aconvert.com/convert/p3r68-cdx67/as7kl-bxls0.png" 
 width="400" alt="Página Home"></a></p>
 
 ## Ver detalhes: 
