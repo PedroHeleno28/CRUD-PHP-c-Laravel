@@ -44,7 +44,7 @@ senha: teste1234
 php artisan serve
 ```
 
-## Acesse o endpoint '/home' para ir para a página inicial:
+## Página inicial:
 Acesso a área pública inicial, onde mostra as marcas cadastradas e os modelos cadastradors, além de opções na parte superior:
 -   Home: Página inicial
 -   Carros: Veículos cadastrados
@@ -56,14 +56,14 @@ width="400" alt="Página Home"></a></p>
 ## Opção 'Carros':
 Irá aparecer as opções de veículos e informações principais.
 <p align="center"><a target="_blank"><img src="https://i.ibb.co/gMqWg0kC/Carros.png" 
-width="100%" alt="Página Home"></a></p>
+width="400" alt="Página Home"></a></p>
 
 ## Ver detalhes: 
 Clicar no botão "Ver detalhes" para acessar todas as informações do veículo.
 <p align="center"><a target="_blank"><img src="https://i.ibb.co/BKBzgkKD/Detalhes-pt1.png" 
-width="100%" alt="Página Home"></a></p>
+width="400" alt="Página Home"></a></p>
 <p align="center"><a target="_blank"><img src="https://i.ibb.co/Myx5PXsf/Detalhes-pt2.png" 
-width="100%" alt="Página Home"></a></p>
+width="400" alt="Página Home"></a></p>
 
 ## Opção 'Login':
 Será redirecionado a tela de login, como na tela abaixo:
