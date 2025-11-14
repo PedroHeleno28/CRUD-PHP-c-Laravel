@@ -9,6 +9,7 @@ composer install
 ```
 
 ## Renomeia o arquivo .env.exemple
+- Se não rodar, copiar o nome do arquivo e colar onde está '.env.example'
 ```bash 
 mv .env.exemple .env
 ```
@@ -36,8 +37,10 @@ php artisan migrate --seed
 
 ## Acesso a área administrativa:
 Usuário e senha para fazer o acesso:
+```bash
 usuário: fatap46950@limtu.com
-senha: teste1234
+senha: Teste1234
+```
 
 ## Rode o comando para iniciar o projeto:
 ```bash 
