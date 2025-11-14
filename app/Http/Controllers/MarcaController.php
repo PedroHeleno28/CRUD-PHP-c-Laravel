@@ -24,7 +24,8 @@ class MarcaController extends Controller
             'nome'=> 'required|min:3',            
         ],
         [
-            'nome.required' => "O campo Nome é obrigatório",            
+            'nome.required' => "O campo nome é obrigatório",
+            'nome.min' => "O campo nome deve ter no mínimo 3 caracteres",  
         ]
     );        
         $marca = new marca();

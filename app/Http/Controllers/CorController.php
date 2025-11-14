@@ -24,7 +24,8 @@ class CorController extends Controller
             'nome'=> 'required|min:3',            
         ],
         [
-            'nome.required' => "O campo Nome é obrigatório",            
+            'nome.required' => "O nome da cor é obrigatório",
+            'nome.min' => "O nome da cor deve ter no mínimo 3 caracteres",            
         ]
     );        
         $cor = new cor();

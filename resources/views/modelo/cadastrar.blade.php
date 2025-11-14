@@ -24,9 +24,9 @@
   }
   </style>
 
-@if(session("sucess"))
+@if(session("success"))
        <div class="alert alert-success" role="alert">
-            {{ session("sucess") }}            
+            {{ session("success") }}            
         </div> 
     @endif
     @if ($errors->any())

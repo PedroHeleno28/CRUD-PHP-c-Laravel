@@ -5,6 +5,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
+    @if ($errors->has('email'))
+        <div class="alert alert-danger">
+            {{ $errors->first('email') }}
+        </div>
+    @endif
 
 <div class="signin-content">                    
                     <div class="signin-image">

@@ -86,7 +86,6 @@ public function searchCarro(Request $request){
 
     public function salvarCarros(Request $request)  
     {
-    // Validação básica (opcional, mas recomendado)
     $request->validate([
         'marca_id' => 'required|exists:marcas,id',
         'modelo_id' => 'required|exists:modelos,id',

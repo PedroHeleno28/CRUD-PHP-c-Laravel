@@ -28,7 +28,8 @@ class ModeloController extends Controller
             'modelo'=> 'required|min:2',            
         ],
         [
-            'modelo.required' => "O campo Nome é obrigatório",            
+            'modelo.required' => "O campo modelo é obrigatório",
+            'modelo.min' => "O campo modelo deve ter no mínimo 2 caracteres",            
         ]
     );        
         $modelo = new modelo();
