@@ -21,15 +21,16 @@ class CorController extends Controller
     public function salvarCor(Request $request)  
     {   
         $validador = $request->validate([
-            'nome'=> 'required|min:3',            
+            'cor'=> 'required|min:3|unique:cores',            
         ],
         [
-            'nome.required' => "O nome da cor é obrigatório",
-            'nome.min' => "O nome da cor deve ter no mínimo 3 caracteres",            
+            'cor.required' => "O nome da cor é obrigatório",
+            'cor.min' => "O nome da cor deve ter no mínimo 3 caracteres", 
+            'cor.unique' => "O nome da cor já existe na nossa base de dados",
         ]
     );        
         $cor = new cor();
-        $cor->cor = $request->input('nome');        
+        $cor->cor = $request->input('cor');        
         $cor->save();
 
         return redirect()->route('cores')

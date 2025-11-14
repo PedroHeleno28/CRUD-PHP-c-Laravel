@@ -128,7 +128,7 @@ public function searchCarro(Request $request){
     $carro->save(); // salva no banco
 
     return redirect()->route('carros.inicio')
-                     ->with('success', 'Carro cadastrado com sucesso!');
+                     ->with('success', 'Carro cadastrado com sucesso!');                         
 }
 
     public function buscarCarro($id){   

@@ -44,7 +44,7 @@
       @csrf
       <div class="form-group">
         <label>Nome da Cor:</label>
-        <input type="text" name="nome" class="form-control" required>
+        <input type="text" name="cor" class="form-control" required>
       </div>
       <div class="d-flex justify-content-between">
         <a href="{{ route('cores') }}" class="btn btn-secondary">Voltar</a>

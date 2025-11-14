@@ -44,9 +44,9 @@
             <div class="form-group">
               <label>Marca</label>
               <select name="marca_id" class="form-control" required>
-                <option value="">Selecione a marca</option>
+                <option value="">Clique para selecionar a marca</option>
                 @foreach($marca as $marca)
-                <option value="{{ $marca->id }}">{{ $marca->marca_nome }}</option>
+                <option value="{{ $marca->id }}">{{ $marca->marca_nome }}</option>                
                 @endforeach
               </select>
             </div>
@@ -54,7 +54,7 @@
                 <div class="form-group col-md-6">
                     <label>Modelo</label>
                     <select name="modelo_id" class="form-control" required>
-                      <option value="">Selecione o modelo</option>
+                      <option value="">Clique para selecionar o modelo</option>
                       @foreach($modelos as $modelo)
                       <option value="{{ $modelo->id }}">{{ $modelo->modelo }}</option>
                       @endforeach
@@ -63,7 +63,7 @@
                 <div class="form-group col-md-6">
                     <label>Cor</label>
                     <select name="cor_id" class="form-control" required>
-                      <option value="">Selecione a cor</option>
+                      <option value="">Clique para selecionar a cor</option>
                       @foreach($cor as $cor)
                       <option value="{{ $cor->id }}">{{ $cor->cor }}</option>
                       @endforeach
@@ -74,40 +74,40 @@
                 <div class="form-group col-md-4">
                     <label>Preço:</label>
                     <input type="number" name="preco" class="form-control"
-                     step="0.01" placeholder="0.00" required>
+                     step="0.01" placeholder="0.00" required value="{{ old('preco') }}">
                 </div>
                 <div class="form-group col-md-4">
                     <label>Quilômetragem:</label>
                     <input type="number" name="km" class="form-control"
-                     placeholder="0.00" required>
+                     placeholder="0.00" required value="{{ old('km') }}">
                 </div>
                 <div class="form-group col-md-4">
                     <label>Ano:</label>
                     <input type="tex" name="ano_fabricacao" class="form-control"
-                     placeholder="2025/2026" required>
+                     placeholder="2025/2026" required value="{{ old('ano_fabricacao') }}">
                 </div>
             </div>
             <div class="form-group">
                 <label>Detalhes</label>
                 <input type="text" name="detalhes" class="form-control" 
-                 placeholder="Ar condicionado, Câmera de ré">
+                 placeholder="Ar condicionado, Câmera de ré" value="{{ old('detalhes') }}">
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label>Foto 1:</label>
                     <input type="text" name="foto1" class="form-control"
-                     placeholder="Link Foto 1">
+                     placeholder="Link Foto 1" value="{{ old('foto1') }}">
                 </div>
                 <div class="form-group col-md-4">
                     <label>Foto 2:</label>
                     <input type="text" name="foto2" class="form-control"
-                     placeholder="Link Foto 2">
+                     placeholder="Link Foto 2" value="{{ old('foto2') }}">
                 </div>
                 <div class="form-group col-md-4">
                     <label>Foto 3:</label>
                     <input type="text" name="foto3" class="form-control"
-                     placeholder="Link Foto 3">
+                     placeholder="Link Foto 3" value="{{ old('foto3') }}">
                 </div>
           </div>                                
             <div class="d-flex justify-content-between">
